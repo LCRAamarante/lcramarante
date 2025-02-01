@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configurações</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <img src="Logo.png" alt="Logotipo" class="logo" width="150px">
+    <h1>Configurações</h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="dashboard.html">Home</a></li>
+        <li><a href="insert_incident.html">Inserir Incidente</a></li>
+        <li><a href="view_incidents.html">Visualizar Incidentes</a></li>
+        <li><a href="settings.html">Configurações</a></li>
+        <li><a href="login.html">Sair</a></li>
+      </ul>
+      </nav>
+  </header>
+  <div class="config-container">
+    <!-- Menu Lateral -->
+    <nav class="sidebar">
+      <h2>Configurações</h2>
+      <ul>
+        <li><a href="#usuarios" class="active">Usuários</a></li>
+        <li><a href="#areas-salas">Áreas e Salas</a></li>
+        <li><a href="#equipamentos">Equipamentos</a></li>
+        <li><a href="#categorias">Categorias</a></li>
+        <li><a href="#prioridades">Prioridades e Estados</a></li>
+        <li><a href="#sistema">Sistema</a></li>
+      </ul>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <div class="content">
+      <section id="usuarios">
+        <h3>Gerenciar Usuários</h3>
+        <p>Adicione, edite ou remova usuários do sistema.</p>
+      
+        <!-- Botão para adicionar novo usuário -->
+        <button class="btn" id="add-user-btn">Adicionar Usuário</button>
+      
+        <!-- Tabela de usuários -->
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Email</th>
+              <th>Nível de Acesso</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="user-table">
+            <!-- Dados dinâmicos serão inseridos aqui -->
+          </tbody>
+        </table>
+      
+        <!-- Modal para adicionar/editar usuário -->
+        <div class="modal" id="user-modal">
+          <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <h3 id="modal-title">Adicionar Usuário</h3>
+            <form id="user-form">
+              <label for="user-name">Nome:</label>
+              <input type="text" id="user-name" name="user-name" required>
+              
+              <label for="user-email">Email:</label>
+              <input type="email" id="user-email" name="user-email" required>
+              
+              <label for="user-role">Nível de Acesso:</label>
+              <select id="user-role" name="user-role" required>
+                <option value="Professor">Professor</option>
+                <option value="Admin">Admin</option>
+                <option value="Responsável">Técnico</option>
+              </select>
+      
+              <button type="submit" class="btn">Salvar</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      
+
+      <section id="areas-salas">
+        <h3>Gerenciar Áreas e Salas</h3>
+        <p>Organize as áreas e as salas disponíveis no sistema.</p>
+        <button class="btn">Adicionar Área</button>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Área</th>
+              <th>Salas</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>ASISBD</td>
+              <td>Lab 1, Lab 2, Lab 3</td>
+              <td><button class="btn edit">Editar</button> <button class="btn delete">Excluir</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="equipamentos">
+        <h3>Gerenciar Equipamentos</h3>
+        <p>Cadastre e gerencie equipamentos nas salas.</p>
+        <button class="btn">Adicionar Equipamento</button>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Sala</th>
+              <th>Estado</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Projetor</td>
+              <td>Lab 1</td>
+              <td>Em uso</td>
+              <td><button class="btn edit">Editar</button> <button class="btn delete">Excluir</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="categorias">
+        <h3>Gerenciar Categorias</h3>
+        <p>Defina categorias para classificar os incidentes.</p>
+        <button class="btn">Adicionar Categoria</button>
+      </section>
+
+      <section id="prioridades">
+        <h3>Configurar Prioridades e Estados</h3>
+        <p>Personalize os estados e prioridades dos incidentes.</p>
+        <button class="btn">Adicionar Estado</button>
+      </section>
+
+      <section id="sistema">
+        <h3>Configurações do Sistema</h3>
+        <p>Configure parâmetros gerais do sistema.</p>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
